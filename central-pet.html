@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Central Pet · Proteção, segurança e bem-estar animal</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--pine:#0F3D3A;--pine2:#17605A;--sun:#F5B82E;--coral:#E4583F;--sky:#DCEEF2;--bg:#F5F8F7;--ink:#13211F;--mut:#566866;--line:#DCE6E3;--white:#fff;--r1:10px;--r2:18px;--sh:0 1px 2px rgba(15,61,58,.06),0 10px 28px rgba(15,61,58,.08);--tg:#1B7A4B;--ta:#9A5B00;--tb:#1D5FA8;--tv:#6B45B8;--tx:#5A6967;--tr:#C73B24;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0C1716;--ink:#EAF3F1;--mut:#A3B9B5;--line:#26403D;--white:#13231F;--sky:#173A42;--tg:#58D08F;--ta:#F2B54A;--tb:#7DB8F5;--tv:#B79BF2;--tx:#A3B9B5;--tr:#FF8A73;--sh:0 1px 2px rgba(0,0,0,.4),0 10px 28px rgba(0,0,0,.35)}}
+:root[data-theme="dark"]{--bg:#0C1716;--ink:#EAF3F1;--mut:#A3B9B5;--line:#26403D;--white:#13231F;--sky:#173A42;--tg:#58D08F;--ta:#F2B54A;--tb:#7DB8F5;--tv:#B79BF2;--tx:#A3B9B5;--tr:#FF8A73;--sh:0 1px 2px rgba(0,0,0,.4),0 10px 28px rgba(0,0,0,.35)}
+*{box-sizing:border-box}html{scroll-padding-top:5rem}
+body{margin:0;background:var(--bg);color:var(--ink);font:1.05rem/1.65 "Atkinson Hyperlegible",system-ui,sans-serif}
+h1,h2,h3,.logo,.strip b,.kpi b{font-family:Manrope,"Segoe UI",system-ui,sans-serif;line-height:1.15;letter-spacing:-.02em}
+h1{font-size:clamp(1.9rem,4vw,2.7rem);font-weight:800;max-width:22ch;margin:.5em 0 .4em}h2{font-size:1.55rem;font-weight:800;margin:1.2em 0 .5em}h3{font-size:1.1rem;font-weight:800;margin:0 0 .4rem}
+a{color:inherit}.wrap{max-width:1140px;margin:0 auto;padding:0 1.4rem}main{padding-bottom:3.5rem;min-height:70vh}
+.skip{position:absolute;left:-999px}.skip:focus{left:1rem;top:1rem;background:var(--sun);color:#000;padding:.5rem 1rem;z-index:9}
+:focus-visible{outline:3px solid var(--coral);outline-offset:2px}
+.top{background:var(--pine);color:#fff;position:sticky;top:0;z-index:5;box-shadow:0 1px 0 rgba(255,255,255,.08)}
+.bar{display:flex;align-items:center;justify-content:space-between;min-height:4.2rem}
+.logo{display:inline-flex;align-items:center;gap:.6rem;font-size:1.35rem;font-weight:800;text-decoration:none;color:#fff}
+nav{display:flex;align-items:center;gap:.2rem}nav a{color:#E3F0ED;text-decoration:none;padding:.5rem .85rem;border-radius:var(--r1);font-weight:700;font-size:.97rem}nav a:hover,nav a[aria-current]{background:rgba(255,255,255,.12);color:#fff}
+nav a.pill{background:var(--sun);color:#1b1b1b;margin-left:.5rem}nav a.pill:hover{filter:brightness(.95)}
+.burger{display:none;background:none;border:1.5px solid rgba(255,255,255,.6);color:#fff;font-size:1.2rem;border-radius:var(--r1);padding:.2rem .7rem;cursor:pointer}
+@media(max-width:800px){.burger{display:block}nav{display:none;position:absolute;left:0;right:0;top:4.2rem;background:var(--pine);padding:.8rem 1.4rem 1.2rem;flex-direction:column;align-items:stretch}nav.open{display:flex}nav a.pill{margin:.4rem 0 0;text-align:center}}
+.lead{font-size:1.15rem;color:var(--mut);max-width:60ch}
+.btn{display:inline-flex;align-items:center;gap:.5rem;border:2px solid transparent;border-radius:var(--r1);padding:.7rem 1.35rem;font:700 1rem "Atkinson Hyperlegible",sans-serif;cursor:pointer;text-decoration:none;color:#1b1b1b;transition:transform .12s,filter .12s}
+.btn.sun{background:var(--sun)}.btn.coral{background:var(--coral);color:#fff}.btn.ghost{border-color:var(--line);background:var(--white);color:var(--ink)}.btn:hover{filter:brightness(.96);transform:translateY(-1px)}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:2.5rem;align-items:center;padding:2.8rem 0 2rem}
+.hero h1{font-size:clamp(2.2rem,5vw,3.5rem)}.actions{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.4rem}
+.note{display:flex;gap:.5rem;align-items:center;color:var(--mut);font-size:.95rem;margin-top:1.2rem}
+@media(max-width:900px){.hero{grid-template-columns:1fr}}
+.art{position:relative;min-height:380px}.blob{position:absolute;inset:0;background:radial-gradient(circle at 30% 30%,var(--sky),transparent 70%),radial-gradient(circle at 80% 80%,#FFE7A8,transparent 60%);border-radius:44% 56% 52% 48%/48% 42% 58% 52%;opacity:.9}
+.pp{position:absolute;border-radius:50%;background:var(--t);box-shadow:var(--sh);overflow:hidden;border:6px solid var(--white)}.pp svg{width:100%;height:100%;display:block}.pp.dog{left:6%;bottom:4%;width:230px;height:230px;--a:#D9923B;--b:#9C5A1A}.pp.cat{right:4%;top:6%;width:190px;height:190px;--a:#8C9BA8;--b:#6B7A87}
+.float{position:absolute;background:var(--white);color:var(--ink);border-radius:14px;box-shadow:var(--sh);padding:.55rem .85rem;font-size:.9rem;display:flex;gap:.5rem;align-items:center;font-weight:700}.f1{left:0;top:10%}.f2{right:0;bottom:10%}
+@media(max-width:560px){.art{min-height:310px}.pp.dog{width:180px;height:180px}.pp.cat{width:150px;height:150px}.float{font-size:.8rem}}
+.dot{width:.6rem;height:.6rem;border-radius:50%;background:var(--c);display:inline-block}
+.strip{list-style:none;margin:1rem 0 0;padding:1.5rem 1.8rem;background:linear-gradient(120deg,var(--pine),var(--pine2));color:#E3F0ED;border-radius:var(--r2);display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:1rem}
+.strip b{display:block;font-size:2.3rem;color:var(--sun);font-weight:800}.strip span{font-size:.95rem}
+.sech{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;flex-wrap:wrap;margin-top:2.2rem}.sech h2{margin:0 0 .8rem}.sech a{font-weight:700;margin-bottom:.8rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(235px,1fr));gap:1.2rem}
+.card{background:var(--white);border:1px solid var(--line);border-radius:var(--r2);overflow:hidden;text-decoration:none;display:block;box-shadow:var(--sh);transition:transform .15s,border-color .15s}.card:hover{transform:translateY(-3px);border-color:var(--pine2)}
+.cachorro{--a:#D9923B;--b:#9C5A1A;--t:#FCEBC8}.gato{--a:#8C9BA8;--b:#6B7A87;--t:#E3EAF0}.outro{--a:#F2EDE6;--b:#E0B8B0;--t:#E2F0DA}
+.tile{display:grid;place-items:end center;height:180px;overflow:hidden;background:radial-gradient(circle at 50% 35%,rgba(255,255,255,.65),transparent 70%),var(--t,var(--sky))}.tile svg{height:100%;width:auto;display:block}.tile img{width:100%;height:100%;object-fit:cover;display:block}
+.tile.big{height:340px;border-radius:var(--r2)}
+.mini{display:inline-grid;place-items:end center;width:38px;height:38px;border-radius:50%;background:var(--t);vertical-align:middle;margin-right:.6rem;overflow:hidden}.mini svg,.mini img{width:100%;height:100%;object-fit:cover;display:block}
+.body{padding:1rem 1.1rem 1.2rem}.body h3{font-size:1.2rem;margin-bottom:.1rem;color:var(--ink)}.body p{margin:0 0 .7rem;color:var(--mut);font-size:.95rem}
+.badge{display:inline-flex;align-items:center;gap:.4rem;padding:.12rem .65rem;border-radius:99px;font-size:.82rem;font-weight:700;color:var(--c,var(--ink));background:color-mix(in srgb,var(--c,var(--ink)) 13%,transparent);white-space:nowrap}
+.badge::before{content:"";width:.5rem;height:.5rem;border-radius:50%;background:currentColor}
+.t-g{--c:var(--tg)}.t-a{--c:var(--ta)}.t-b{--c:var(--tb)}.t-v{--c:var(--tv)}.t-x{--c:var(--tx)}.t-r{--c:var(--tr)}
+.trio{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.2rem}
+.feat{display:block;text-decoration:none;background:var(--white);border:1px solid var(--line);border-radius:var(--r2);padding:1.4rem;box-shadow:var(--sh);transition:border-color .15s}.feat:hover{border-color:var(--pine2)}
+.feat p{margin:0;color:var(--mut)}.ico{display:inline-grid;place-items:center;width:46px;height:46px;border-radius:13px;background:var(--sky);color:var(--pine);margin-bottom:.8rem}
+:root[data-theme="dark"] .ico{color:var(--sun)}@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .ico{color:var(--sun)}}
+.cta{background:linear-gradient(120deg,var(--pine),var(--pine2));color:#fff;border-radius:var(--r2);padding:2rem 2.2rem;display:flex;gap:1.2rem;justify-content:space-between;align-items:center;flex-wrap:wrap;margin-top:2.8rem}.cta h2{margin:0 0 .3rem}.cta p{margin:0;color:#CFE3DF}
+.panel{background:var(--white);border:1px solid var(--line);border-radius:var(--r2);padding:1.5rem;margin:1.2rem 0;box-shadow:var(--sh)}
+.split{display:grid;grid-template-columns:1.5fr 1fr;gap:1.5rem;align-items:start}@media(max-width:900px){.split{grid-template-columns:1fr}}.split .form.panel{max-width:none}
+.side{background:var(--sky);box-shadow:none;border-color:transparent;margin-top:1.2rem}.checks{margin:0;padding-left:1.1rem;color:var(--ink)}.checks li{margin:.4rem 0}
+.form{display:grid;gap:1.1rem;max-width:640px}.form.panel{max-width:680px}
+label{display:grid;gap:.3rem;font-weight:700;font-size:.95rem}label.inline{display:flex;gap:.5rem;align-items:center;font-weight:400;font-size:1rem}
+input,select,textarea{font:inherit;padding:.65rem .8rem;border:1.5px solid var(--line);border-radius:var(--r1);background:var(--bg);color:var(--ink);width:100%}
+input:focus,select:focus,textarea:focus{border-color:var(--pine2);outline:3px solid color-mix(in srgb,var(--pine2) 25%,transparent);outline-offset:0}
+input[type=radio],input[type=checkbox]{width:auto}fieldset{border:1.5px solid var(--line);border-radius:var(--r1)}
+.filters{display:flex;flex-wrap:wrap;gap:.9rem;align-items:end;margin:1.2rem 0 1.6rem;padding:1rem;background:var(--white);border:1px solid var(--line);border-radius:var(--r2)}.filters label{flex:1 1 150px}
+.flash{padding:.85rem 1.1rem;border-radius:var(--r1);margin:1.2rem 0;font-weight:700}.flash.ok{background:#D6F0DE;color:#0b3d1a}.flash.erro{background:#FFDDD7;color:#7a1c0e}
+.code{font:800 1.25rem Manrope,sans-serif;background:#fff;padding:.1rem .6rem;border-radius:6px;color:#000}
+.empty{background:var(--white);border:1.5px dashed var(--line);border-radius:var(--r2);padding:1.2rem;color:var(--mut)}
+.detail,.detail2{display:grid;grid-template-columns:1fr 1.1fr;gap:2.2rem;margin:1.2rem 0}.detail2{grid-template-columns:1fr 1fr}@media(max-width:800px){.detail,.detail2{grid-template-columns:1fr}}
+.facts{display:grid;grid-template-columns:max-content 1fr;gap:.45rem 1.4rem;margin:1rem 0}.facts dt{color:var(--mut)}.facts dd{margin:0;font-weight:700}
+.timeline{list-style:none;padding:0;border-left:2px solid var(--line);margin-left:.5rem}.timeline li{padding:0 0 1.1rem 1.2rem;position:relative}.timeline li::before{content:"";position:absolute;left:-7px;top:.5rem;width:12px;height:12px;border-radius:50%;background:var(--sun);border:2px solid var(--bg)}.timeline time{display:block;font-size:.85rem;color:var(--mut)}
+.tabs{display:inline-flex;flex-wrap:wrap;gap:.15rem;background:var(--sky);padding:.25rem;border-radius:14px;margin:.4rem 0 1.2rem}.tabs a{padding:.45rem 1.2rem;border-radius:11px;text-decoration:none;font-weight:700}.tabs a[aria-current]{background:var(--pine);color:#fff}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-bottom:1.5rem}.kpi{display:flex;gap:.9rem;align-items:center;background:var(--white);border:1px solid var(--line);border-radius:var(--r2);padding:1rem 1.1rem;box-shadow:var(--sh)}
+.kpi .ico{margin:0}.kpi b{display:block;font-size:1.55rem;font-weight:800}.kpi span:not(.ico){color:var(--mut);font-size:.9rem;line-height:1.3;display:block}
+.scroll{overflow-x:auto;background:var(--white);border:1px solid var(--line);border-radius:var(--r2);box-shadow:var(--sh)}
+table{width:100%;border-collapse:collapse}th,td{text-align:left;padding:.85rem 1rem;border-bottom:1px solid var(--line);vertical-align:middle}th{font-size:.85rem;color:var(--mut);font-weight:700;background:color-mix(in srgb,var(--sky) 45%,transparent)}tbody tr:hover{background:color-mix(in srgb,var(--sky) 30%,transparent)}tr:last-child td{border-bottom:0}
+td select{min-width:11rem}
+footer{background:var(--pine);color:#CFE3DF;padding:2.4rem 0;font-size:.95rem}.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1.4fr;gap:2rem}@media(max-width:800px){.fgrid{grid-template-columns:1fr}}
+footer h3{color:#fff;font-size:1rem}footer a{display:block;text-decoration:none;padding:.15rem 0}footer a:hover{color:#fff;text-decoration:underline}footer p{margin:.3rem 0}.small{font-size:.85rem;opacity:.8}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#app">Ir para o conteúdo</a>
+<header class="top"><div class="wrap bar">
+  <a class="logo" href="#/"><svg viewBox="0 0 24 24" width="34" height="34" aria-hidden="true"><rect width="24" height="24" rx="7" fill="#F5B82E"/><g fill="#0F3D3A"><circle cx="7.5" cy="10.5" r="1.7"/><circle cx="11" cy="7" r="1.7"/><circle cx="15.5" cy="7.4" r="1.7"/><circle cx="18" cy="11.5" r="1.6"/><path d="M12.4 12c-2.8 0-5.2 3-4.4 5.2.7 1.8 2.6 1.3 4.4 1.3s3.7.5 4.4-1.3c.8-2.2-1.6-5.2-4.4-5.2z"/></g></svg> Central Pet</a>
+  <button class="burger" aria-label="Abrir menu" aria-expanded="false" id="bg">☰</button>
+  <nav id="nav" aria-label="Principal"></nav>
+</div></header>
+<main class="wrap" id="app" tabindex="-1"></main>
+<footer><div class="wrap fgrid"><div><span class="logo"><svg viewBox="0 0 24 24" width="34" height="34" aria-hidden="true"><rect width="24" height="24" rx="7" fill="#F5B82E"/><g fill="#0F3D3A"><circle cx="7.5" cy="10.5" r="1.7"/><circle cx="11" cy="7" r="1.7"/><circle cx="15.5" cy="7.4" r="1.7"/><circle cx="18" cy="11.5" r="1.6"/><path d="M12.4 12c-2.8 0-5.2 3-4.4 5.2.7 1.8 2.6 1.3 4.4 1.3s3.7.5 4.4-1.3c.8-2.2-1.6-5.2-4.4-5.2z"/></g></svg> Central Pet</span><p>Proteção, segurança e bem-estar animal em um só lugar.</p></div><div><h3>Plataforma</h3><a href="#/animais">Adotar</a><a href="#/denunciar">Denunciar</a><a href="#/doar">Doar</a><a href="#/acompanhar">Acompanhar</a></div><div><h3>Emergência</h3><p>Risco de vida ao animal? Acione também a vigilância sanitária ou o órgão ambiental da sua cidade.</p><p class="small">Versão de demonstração: os dados ficam salvos apenas neste navegador.</p></div></div></footer>
+<script>
+const TIPOS=["Maus-tratos físicos","Abandono","Negligência (sem água, comida ou abrigo)","Animal em risco de vida","Criação ou comércio irregular","Outro"];
+const STATUS=["Recebida","Em triagem","Encaminhada","Em atendimento","Resolvida","Arquivada"],PRIOR=["Baixa","Média","Alta","Urgente"],AST=["Disponível","Em processo de adoção","Em tratamento","Adotado"];
+const EM={Cachorro:"🐶",Gato:"🐱",Outro:"🐰"},ORGS=["ONG Patas Amigas","Vigilância Animal Municipal"];
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const dtf=()=>new Date().toLocaleString("pt-BR",{dateStyle:"short",timeStyle:"short"});
+const brl=v=>(v||0).toLocaleString("pt-BR",{style:"currency",currency:"BRL"});
+const cod=p=>p+"-"+Math.random().toString(16).slice(2,8).toUpperCase();
+function seed(){const P=[["Thor","Cachorro","Vira-lata","Macho","Grande","3 anos","Brincalhão e ótimo com crianças. Resgatado de uma obra abandonada.","Brincalhão, sociável",1,1,"Disponível"],["Mel","Cachorro","Poodle","Fêmea","Pequeno","6 anos","Calma e carinhosa, ideal para apartamento.","Calma, dócil",1,1,"Disponível"],["Nina","Gato","SRD","Fêmea","Pequeno","1 ano","Curiosa e muito ativa. Convive bem com outros gatos.","Curiosa, ativa",1,0,"Disponível"],["Pipoca","Gato","Siamês","Macho","Pequeno","4 anos","Sossegado, gosta de colo e de janelas ensolaradas.","Tranquilo",1,1,"Disponível"],["Bidu","Cachorro","Beagle","Macho","Médio","2 anos","Em recuperação de cirurgia; adoção liberada após o tratamento.","Amigável",0,1,"Em tratamento"],["Luna","Cachorro","Labrador","Fêmea","Grande","5 anos","Adora passear e nadar. Precisa de rotina de caminhadas.","Energética",1,1,"Disponível"],["Totó","Outro","Coelho","Macho","Pequeno","2 anos","Coelho dócil, acostumado com manuseio.","Dócil",0,0,"Disponível"],["Maria","Gato","SRD","Fêmea","Pequeno","3 anos","Visita de adoção já marcada.","Carinhosa",1,1,"Em processo de adoção"]];
+return{pets:P.map((p,i)=>({id:i+1,nome:p[0],especie:p[1],raca:p[2],sexo:p[3],porte:p[4],idade:p[5],desc:p[6],temp:p[7],vac:p[8],cast:p[9],status:p[10]})),
+dens:[["Abandono","Cachorro preso em terreno vazio, sem água há dias.","Rua das Acácias, 120 - Centro","Alta","Em triagem"],["Maus-tratos físicos","Vizinho agride o animal com frequência.","Av. Brasil, 450","Urgente","Recebida"],["Negligência (sem água, comida ou abrigo)","Cavalo em pasto sem sombra nem água.","Estrada Velha, km 3","Média","Resolvida"]].map((d,i)=>({id:i+1,prot:"CP-DEMO0"+(i+1),tipo:d[0],desc:d[1],local:d[2],anon:1,nome:"",contato:"",prior:d[3],status:d[4],hist:[{t:"Denúncia recebida.",pub:1,d:dtf()}]})),
+doas:[{id:1,cod:"DO-DEMO01",tipo:"Dinheiro",forma:"Pix",valor:50,item:"",doador:"Ana",org:0,status:"Confirmada",d:dtf()}],ints:[]}}
+let S=null;try{S=JSON.parse(localStorage.getItem("cp1"))}catch(e){}if(!S)S=seed();
+const save=()=>{try{localStorage.setItem("cp1",JSON.stringify(S))}catch(e){}};
+let org=false,F={q:"",esp:"",porte:"",sexo:"",st:"Disponível"},FD={st:"",pr:""},msg=null;
+const $=s=>document.querySelector(s),app=$("#app");
+const opts=(a,sel,all)=>(all?`<option value="">${all}</option>`:"")+a.map(x=>`<option ${x===sel?"selected":""}>${esc(x)}</option>`).join("");
+const flash=(t,c="ok")=>{msg={t,c}};
+const IC={search:'<circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/>',shield:'<path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/>',building:'<path d="M4 21V8l8-5 8 5v13"/><path d="M9 21v-6h6v6M9 11h.01M15 11h.01"/>',alert:'<path d="M12 3l10 18H2z"/><path d="M12 10v5M12 18h.01"/>',coin:'<circle cx="12" cy="12" r="9"/><path d="M12 7v10M9.5 9.5c0-1 1-1.7 2.5-1.7s2.5.7 2.5 1.7-1 1.5-2.5 1.7-2.5.7-2.5 1.7 1 1.7 2.5 1.7 2.5-.7 2.5-1.7"/>',inbox:'<path d="M4 13l3-8h10l3 8v6H4z"/><path d="M4 13h5l1 2h4l1-2h5"/>',clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',users:'<circle cx="9" cy="8" r="3.5"/><path d="M3 20c0-3.5 3-6 6-6s6 2.5 6 6M17 5a3.5 3.5 0 010 7M21 20c0-2.5-1.5-4.5-3.5-5.5"/>'};
+const ic=(n,s=24)=>`<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${IC[n]}</svg>`;
+let _u=0;
+const DOGS={caramelo:{b:"#C98B4A",d:"#86521F",l:"#EBC794",e:"#9A6230",n:"#2A1A14"},poodle:{b:"#F1EBE1",d:"#C7BAA6",l:"#FFFFFF",e:"#E2D7C6",n:"#2A2420",curl:1},beagle:{b:"#B8763A",d:"#78441F",l:"#F6EBD8",e:"#5E331A",n:"#1F1511",blaze:1},labrador:{b:"#E2BC78",d:"#AE8847",l:"#F7E6BE",e:"#C79F57",n:"#2A1E16"}};
+const dog=k=>{const u="g"+(++_u),c=DOGS[k],eye=x=>`<ellipse cx="${x}" cy="88" rx="9.5" ry="8" fill="#fff"/><circle cx="${x}" cy="88" r="6.6" fill="url(#${u}i)"/><circle cx="${x}" cy="88" r="3.1" fill="#120A06"/><circle cx="${x-2.2}" cy="85.6" r="1.9" fill="#fff"/><path d="M${x-11} 82Q${x} 74 ${x+11} 82" stroke="${c.d}" stroke-width="3" fill="none" stroke-linecap="round" opacity=".55"/>`,
+curls=c.curl?[[100,40],[78,46],[122,46],[62,60],[138,60],[36,102],[32,124],[164,102],[168,124]].map(([x,y])=>`<circle cx="${x}" cy="${y}" r="15" fill="url(#${u}f)" stroke="${c.d}" stroke-opacity=".3"/>`).join(""):"";
+return`<defs><radialGradient id="${u}f" cx="50%" cy="36%" r="72%"><stop offset="0" stop-color="${c.l}"/><stop offset=".55" stop-color="${c.b}"/><stop offset="1" stop-color="${c.d}"/></radialGradient><radialGradient id="${u}e" cx="50%" cy="28%" r="85%"><stop offset="0" stop-color="${c.e}"/><stop offset="1" stop-color="${c.d}"/></radialGradient><radialGradient id="${u}i" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#C9904A"/><stop offset="1" stop-color="#3F220F"/></radialGradient><filter id="${u}s"><feGaussianBlur stdDeviation="4"/></filter></defs>
+<ellipse cx="100" cy="198" rx="78" ry="46" fill="url(#${u}f)"/><path d="M62 160q38 22 76 0" stroke="${c.d}" stroke-opacity=".3" stroke-width="3" fill="none"/>
+<path d="M58 62C30 60 16 108 30 142c14 12 32-6 36-42z" fill="url(#${u}e)"/><path d="M142 62c28-2 42 46 28 80-14 12-32-6-36-42z" fill="url(#${u}e)"/>
+<ellipse cx="100" cy="158" rx="46" ry="20" fill="#000" opacity=".22" filter="url(#${u}s)"/>
+<ellipse cx="100" cy="92" rx="50" ry="52" fill="url(#${u}f)"/>${c.blaze?`<path d="M100 42c-10 14-12 42-11 60h22c1-18-1-46-11-60z" fill="${c.l}"/>`:""}${curls}
+<ellipse cx="100" cy="122" rx="29" ry="24" fill="${c.l}"/>${eye(74)}${eye(126)}
+<path d="M87 107q13-9 26 0q-3 13-13 15q-10-2-13-15z" fill="${c.n}"/><ellipse cx="94" cy="108" rx="5.5" ry="2.2" fill="#fff" opacity=".5"/>
+<path d="M100 122v8M100 130q-8 9-18 3M100 130q8 9 18 3" stroke="${c.n}" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+<g fill="${c.d}" opacity=".45"><circle cx="82" cy="121" r="1.4"/><circle cx="77" cy="127" r="1.4"/><circle cx="85" cy="128" r="1.4"/><circle cx="118" cy="121" r="1.4"/><circle cx="123" cy="127" r="1.4"/><circle cx="115" cy="128" r="1.4"/></g>
+<path d="M58 72q-5 9-3 18M142 72q5 9 3 18M72 54q5 4 11 3M128 54q-5 4-11 3M64 104q-4 6-2 12M136 104q4 6 2 12" stroke="${c.d}" stroke-opacity=".28" stroke-width="2" fill="none" stroke-linecap="round"/>`};
+const CATS={cinza:{b:"#9AA3AD",d:"#59636E",l:"#DDE1E5",s:"#434B54",i:["#D5E27A","#4F6B12"]},laranja:{b:"#E58A3C",d:"#A9531A",l:"#F8D3A3",s:"#B04F17",i:["#EBCB45","#6E5410"]},siames:{b:"#EFE3D2",d:"#B9A58E",l:"#FFF9EF",s:"#4F3B2D",i:["#9ACDF0","#1F5E94"],mask:1}};
+const cat=k=>{const u="g"+(++_u),c=CATS[k],eye=x=>`<path d="M${x-15} 99q15-15 30 0q-15 13-30 0z" fill="url(#${u}i)" stroke="${c.s}" stroke-width="1.6"/><ellipse cx="${x}" cy="99" rx="3.2" ry="8.5" fill="#0d0d0d"/><circle cx="${x-4}" cy="95" r="2.2" fill="#fff"/>`;
+return`<defs><radialGradient id="${u}f" cx="50%" cy="36%" r="72%"><stop offset="0" stop-color="${c.l}"/><stop offset=".5" stop-color="${c.b}"/><stop offset="1" stop-color="${c.d}"/></radialGradient><radialGradient id="${u}i" cx="45%" cy="35%" r="75%"><stop offset="0" stop-color="${c.i[0]}"/><stop offset="1" stop-color="${c.i[1]}"/></radialGradient><filter id="${u}s"><feGaussianBlur stdDeviation="5"/></filter></defs>
+<ellipse cx="100" cy="200" rx="76" ry="46" fill="url(#${u}f)"/>
+<path d="M42 78L50 16l46 32z" fill="${c.mask?c.s:c.b}"/><path d="M158 78L150 16l-46 32z" fill="${c.mask?c.s:c.b}"/><path d="M54 64L58 34l26 18z" fill="${c.mask?"#8B6B5A":"#E9A9A0"}"/><path d="M146 64L142 34l-26 18z" fill="${c.mask?"#8B6B5A":"#E9A9A0"}"/>
+<ellipse cx="100" cy="160" rx="46" ry="16" fill="#000" opacity=".22" filter="url(#${u}s)"/>
+<ellipse cx="100" cy="104" rx="58" ry="48" fill="url(#${u}f)"/>
+${c.mask?`<ellipse cx="100" cy="120" rx="30" ry="24" fill="${c.s}" opacity=".6" filter="url(#${u}s)"/><ellipse cx="100" cy="76" rx="14" ry="12" fill="${c.s}" opacity=".45" filter="url(#${u}s)"/>`:`<path d="M100 58v20M87 60l4 17M113 60l-4 17M44 98l18 4M46 112l17-1M156 98l-18 4M154 112l-17-1" stroke="${c.s}" stroke-width="4" stroke-linecap="round" opacity=".5"/>`}
+<ellipse cx="100" cy="124" rx="21" ry="15" fill="${c.l}" opacity=".95"/>${eye(70)}${eye(130)}
+<path d="M92 114h16l-8 10z" fill="#E08C93"/><path d="M100 124v5M100 129q-8 7-15 1M100 129q8 7 15 1" stroke="#4a3030" stroke-width="2" fill="none" stroke-linecap="round"/>
+<path d="M76 126L22 116M76 132L24 136M124 126l54-10M124 132l52 4" stroke="${c.d}" stroke-opacity=".7" stroke-width="1.5" stroke-linecap="round"/>`};
+const bun=()=>{const u="g"+(++_u);return`<defs><radialGradient id="${u}f" cx="50%" cy="36%" r="72%"><stop offset="0" stop-color="#fff"/><stop offset=".55" stop-color="#EAE5DD"/><stop offset="1" stop-color="#B9AE9F"/></radialGradient><filter id="${u}s"><feGaussianBlur stdDeviation="4"/></filter></defs>
+<ellipse cx="100" cy="200" rx="72" ry="46" fill="url(#${u}f)"/><g transform="rotate(-9 74 56)"><ellipse cx="74" cy="48" rx="17" ry="46" fill="url(#${u}f)"/><ellipse cx="74" cy="52" rx="8" ry="34" fill="#EFB9B9"/></g><g transform="rotate(9 126 56)"><ellipse cx="126" cy="48" rx="17" ry="46" fill="url(#${u}f)"/><ellipse cx="126" cy="52" rx="8" ry="34" fill="#EFB9B9"/></g>
+<ellipse cx="100" cy="160" rx="42" ry="16" fill="#000" opacity=".2" filter="url(#${u}s)"/><ellipse cx="100" cy="112" rx="52" ry="48" fill="url(#${u}f)"/><ellipse cx="100" cy="132" rx="26" ry="19" fill="#fff"/>
+<g><ellipse cx="74" cy="104" rx="7" ry="8.5" fill="#21140E"/><ellipse cx="126" cy="104" rx="7" ry="8.5" fill="#21140E"/><circle cx="72" cy="101" r="2.3" fill="#fff"/><circle cx="124" cy="101" r="2.3" fill="#fff"/></g>
+<path d="M93 122h14l-7 8z" fill="#E59AA0"/><path d="M100 130v6M100 136q-6 6-12 2M100 136q6 6 12 2" stroke="#6b4a4a" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M80 134L34 126M80 140L36 146M120 134l46-8M120 140l44 6" stroke="#B9AE9F" stroke-width="1.4" stroke-linecap="round"/>`};
+const av=(e,r="",id=0)=>{r=(r||"").toLowerCase();const g=e==="Cachorro"?dog(/poodle/.test(r)?"poodle":/beagle/.test(r)?"beagle":/labrador/.test(r)?"labrador":"caramelo"):e==="Gato"?cat(/siam/.test(r)?"siames":id%2?"laranja":"cinza"):bun();return`<svg viewBox="0 0 200 200" aria-hidden="true">${g}</svg>`};
+const pic=p=>p.foto?`<img src="${esc(p.foto)}" alt="Foto de ${esc(p.nome)}">`:av(p.especie,p.raca,p.id);
+function img2data(f,cb){const r=new FileReader();r.onload=()=>{const i=new Image();i.onload=()=>{const k=Math.min(1,640/Math.max(i.width,i.height)),c=document.createElement("canvas");c.width=Math.round(i.width*k);c.height=Math.round(i.height*k);c.getContext("2d").drawImage(i,0,0,c.width,c.height);cb(c.toDataURL("image/jpeg",.78))};i.onerror=()=>cb(null);i.src=r.result};r.onerror=()=>cb(null);r.readAsDataURL(f)}
+const TONE={"Disponível":"g","Em processo de adoção":"a","Em tratamento":"b","Adotado":"v","Recebida":"b","Em triagem":"a","Encaminhada":"v","Em atendimento":"b","Resolvida":"g","Arquivada":"x","Aguardando":"a","Confirmada":"g","Cancelada":"x","Urgente":"r","Alta":"a","Média":"b","Baixa":"x"};
+const bd=s=>`<span class="badge t-${TONE[s]||"x"}">${esc(s)}</span>`;
+const kpi=(i,v,l)=>`<div class="kpi"><span class="ico">${ic(i)}</span><div><b>${v}</b><span>${l}</span></div></div>`;
+const card=p=>`<a class="card pet ${p.especie.toLowerCase()}" href="#/animal/${p.id}"><div class="tile">${pic(p)}</div><div class="body"><h3>${esc(p.nome)}</h3><p>${esc(p.raca)} · ${esc(p.porte)} · ${esc(p.idade)}</p>${bd(p.status)}</div></a>`;
+const pg={};
+pg.home=()=>{const d=S.pets.filter(p=>p.status==="Disponível"),a=S.pets.filter(p=>p.status==="Adotado").length,r=S.dens.filter(x=>x.status==="Resolvida").length;
+return`<section class="hero"><div><h1>Todo animal merece proteção, um lar e alguém que responda por ele.</h1><p class="lead">Adote, denuncie maus-tratos e ajude quem cuida. Tudo em um só lugar, com acompanhamento de cada passo.</p><div class="actions"><a class="btn sun" href="#/animais">Quero adotar</a><a class="btn coral" href="#/denunciar">Denunciar maus-tratos</a><a class="btn ghost" href="#/doar">Fazer uma doação</a></div><p class="note">${ic("shield",18)} Denúncias podem ser anônimas e acompanhadas por protocolo.</p></div>
+<div class="art" aria-hidden="true"><div class="blob"></div><div class="pp dog cachorro">${av("Cachorro","Vira-lata",2)}</div><div class="pp cat gato">${av("Gato","SRD",3)}</div><div class="float f1"><i class="dot t-g"></i>Thor · disponível para adoção</div><div class="float f2">${ic("shield",18)} CP-DEMO01 · Em triagem</div></div></section>
+<ul class="strip" aria-label="Números da plataforma"><li><b>${d.length}</b><span>animais esperando um lar</span></li><li><b>${a}</b><span>animais já adotados</span></li><li><b>${r}</b><span>denúncias resolvidas</span></li></ul>
+<div class="sech"><h2>Quem está esperando por você</h2><a href="#/animais">Ver todos os animais</a></div><div class="grid">${d.slice(0,4).map(card).join("")}</div>
+<h2>O que você pode fazer aqui</h2><section class="trio"><a class="feat" href="#/acompanhar"><span class="ico">${ic("search")}</span><h3>Acompanhe pelo protocolo</h3><p>Toda denúncia e doação recebe um código. Use-o para ver o andamento a qualquer momento.</p></a><a class="feat" href="#/denunciar"><span class="ico">${ic("shield")}</span><h3>Denuncie com segurança</h3><p>Você escolhe se quer se identificar. No modo anônimo, nenhum dado pessoal é guardado.</p></a><a class="feat" href="#/doar"><span class="ico">${ic("coin")}</span><h3>Doe para quem cuida</h3><p>Dinheiro, ração, medicamentos ou apadrinhamento, direto para a organização que você escolher.</p></a></section>
+<section class="cta"><div><h2>Sua organização cuida de animais?</h2><p>Receba denúncias, faça a triagem, acompanhe os casos e administre doações em um só painel.</p></div><a class="btn sun" href="#/entrar">Acessar o painel</a></section>`};
+const listaPets=()=>{const l=S.pets.filter(p=>(!F.esp||p.especie===F.esp)&&(!F.porte||p.porte===F.porte)&&(!F.sexo||p.sexo===F.sexo)&&(!F.st||p.status===F.st)&&(!F.q||(p.nome+" "+p.raca).toLowerCase().includes(F.q.toLowerCase())));
+return l.length?`<div class="grid">${l.map(card).join("")}</div>`:`<p class="empty">Nenhum animal encontrado com esses filtros. Tente ampliar a busca.</p>`};
+pg.animais=()=>`<h1>Animais para adoção</h1><div class="filters"><label>Buscar<input id="fq" value="${esc(F.q)}" placeholder="Nome ou raça"></label>
+<label>Espécie<select data-f="esp">${opts(["Cachorro","Gato","Outro"],F.esp,"Todas")}</select></label><label>Porte<select data-f="porte">${opts(["Pequeno","Médio","Grande"],F.porte,"Todos")}</select></label>
+<label>Sexo<select data-f="sexo">${opts(["Macho","Fêmea"],F.sexo,"Todos")}</select></label><label>Situação<select data-f="st">${opts(AST,F.st,"Todas")}</select></label></div><div id="lp">${listaPets()}</div>`;
+pg.animal=id=>{const p=S.pets.find(x=>x.id==id);if(!p)return pg.erro();
+return`<a href="#/animais">← Voltar para a lista</a><div class="detail"><div class="tile big ${p.especie.toLowerCase()}">${pic(p)}</div><div><h1>${esc(p.nome)}</h1>${bd(p.status)}<p>${esc(p.desc)}</p>
+<dl class="facts"><dt>Espécie</dt><dd>${esc(p.especie)} · ${esc(p.raca)}</dd><dt>Sexo</dt><dd>${esc(p.sexo)}</dd><dt>Porte</dt><dd>${esc(p.porte)}</dd><dt>Idade</dt><dd>${esc(p.idade)}</dd><dt>Temperamento</dt><dd>${esc(p.temp)}</dd><dt>Vacinado</dt><dd>${p.vac?"Sim":"Não"}</dd><dt>Castrado</dt><dd>${p.cast?"Sim":"Não"}</dd></dl></div></div>
+${p.status==="Disponível"?`<section class="panel"><h2>Quero adotar ${esc(p.nome)}</h2><form class="form" onsubmit="return fx.interesse(event,${p.id})"><label>Seu nome<input name="nome" required></label><label>Telefone ou e-mail<input name="contato" required></label><label>Conte um pouco sobre sua casa e rotina<textarea name="msg" rows="3"></textarea></label><button class="btn sun">Enviar interesse</button></form></section>`:`<p class="empty">${esc(p.nome)} não está disponível para novos pedidos no momento.</p>`}`};
+pg.denunciar=()=>`<h1>Denunciar maus-tratos</h1><p class="lead">Descreva o que viu. Ao enviar, você recebe um protocolo para acompanhar o caso.</p>
+<div class="split"><form class="form panel" onsubmit="return fx.denuncia(event)"><fieldset><legend>Como você quer enviar?</legend><label class="inline"><input type="radio" name="anon" value="1" checked onchange="$('#idf').hidden=true"> Anônima</label><label class="inline"><input type="radio" name="anon" value="0" onchange="$('#idf').hidden=false"> Identificada</label></fieldset>
+<div id="idf" hidden class="form"><label>Seu nome<input name="nome" autocomplete="name"></label><label>Telefone ou e-mail<input name="contato"></label></div>
+<label>Tipo de ocorrência<select name="tipo">${opts(TIPOS)}</select></label><label>Local (rua, número, referência)<input name="local" required></label><label>O que aconteceu?<textarea name="desc" rows="5" required minlength="10"></textarea></label><button class="btn coral">Enviar denúncia</button></form><aside class="side panel"><h3>Para a denúncia ser útil</h3><ul class="checks"><li>Informe o endereço com um ponto de referência.</li><li>Diga há quanto tempo a situação acontece.</li><li>Se houver risco de vida, escolha “Animal em risco de vida”: o caso entra com prioridade alta.</li><li>Guarde o protocolo para acompanhar.</li></ul></aside></div>`;
+pg.doar=()=>`<h1>Faça uma doação</h1><p class="lead">Escolha como ajudar e para qual organização. Você recebe um código para acompanhar.</p>
+<div class="split"><form class="form panel" onsubmit="return fx.doacao(event)"><label>Tipo de contribuição<select name="tipo" id="tp">${opts(["Dinheiro","Apadrinhamento","Ração","Medicamentos","Cobertores e insumos"])}</select></label>
+<div id="din" class="form"><label>Valor (R$)<input name="valor" inputmode="decimal" placeholder="50,00"></label><label>Forma de pagamento<select name="forma">${opts(["Pix","Cartão","Boleto"])}</select></label></div>
+<div id="itm" hidden><label>O que e quanto você vai entregar?<input name="item" placeholder="Ex.: 2 sacos de ração de 10 kg"></label></div>
+<label>Organização<select name="org">${ORGS.map((o,i)=>`<option value="${i}">${o}</option>`).join("")}</select></label><label>Seu nome (opcional)<input name="doador"></label><button class="btn sun">Registrar doação</button></form><aside class="side panel"><h3>Como funciona</h3><ul class="checks"><li>Você escolhe a organização que vai receber.</li><li>A doação fica como “Aguardando” até a organização confirmar.</li><li>Use o código recebido para acompanhar a situação.</li></ul></aside></div>`;
+pg.acompanhar=(c,nova)=>{c=(c||"").toUpperCase();let r="";
+if(c.startsWith("CP-")){const d=S.dens.find(x=>x.prot===c);r=d?`<section class="panel"><h2>Denúncia ${d.prot}</h2><p>${bd(d.status)} ${esc(d.tipo)} · ${esc(d.local)}</p><h3>Andamento</h3><ol class="timeline">${d.hist.filter(h=>h.pub).slice().reverse().map(h=>`<li><time>${h.d}</time>${esc(h.t)}</li>`).join("")}</ol></section>`:""}
+else if(c.startsWith("DO-")){const d=S.doas.find(x=>x.cod===c);r=d?`<section class="panel"><h2>Doação ${d.cod}</h2><p>${bd(d.status)}</p><dl class="facts"><dt>Tipo</dt><dd>${esc(d.tipo)}</dd>${d.valor?`<dt>Valor</dt><dd>${brl(d.valor)}</dd><dt>Forma</dt><dd>${esc(d.forma)}</dd>`:`<dt>Item</dt><dd>${esc(d.item)}</dd>`}<dt>Organização</dt><dd>${ORGS[d.org]}</dd><dt>Registrada em</dt><dd>${d.d}</dd></dl></section>`:""}
+return`<h1>Acompanhar protocolo</h1>${nova&&r?`<p class="flash ok">Registrado! Guarde seu código: <b class="code">${esc(c)}</b></p>`:""}<form class="filters" onsubmit="return fx.busca(event)"><label>Código (CP-… ou DO-…)<input name="c" value="${esc(c)}" required></label><button class="btn sun">Consultar</button></form>
+${c&&!r?`<p class="empty">Nenhum registro encontrado para “${esc(c)}”. Confira o código e tente de novo.</p>`:""}${r}<p class="empty">Para testar: <b>CP-DEMO01</b> ou <b>DO-DEMO01</b>.</p>`};
+pg.entrar=()=>`<h1>Área das organizações</h1><p class="lead">Acesso para ONGs e órgãos responsáveis. Demonstração: e-mail <code>patas@centralpet.demo</code> · senha <code>pet123</code></p>
+<form class="form panel" onsubmit="return fx.login(event)"><label>E-mail<input type="email" name="email" required autocomplete="username" value="patas@centralpet.demo"></label><label>Senha<input type="password" name="senha" required autocomplete="current-password"></label><button class="btn sun">Entrar</button></form>`;
+const tabs=a=>`<nav class="tabs" aria-label="Painel">${[["den","Denúncias"],["ani","Animais"],["doa","Doações"]].map(([k,n])=>`<a href="#/painel/${k}" ${k===a?'aria-current="page"':""}>${n}</a>`).join("")}</nav>`;
+pg.painel=(a,id)=>{if(!org){flash("Entre com a conta da organização para acessar o painel.","erro");return pg.entrar()}
+if(a==="caso")return pg.caso(id);a=a||"den";
+if(a==="den"){const open=S.dens.filter(d=>!["Resolvida","Arquivada"].includes(d.status)),conf=S.doas.filter(d=>d.status==="Confirmada");const ord={Urgente:0,Alta:1,"Média":2,Baixa:3};
+const l=S.dens.filter(d=>(!FD.st||d.status===FD.st)&&(!FD.pr||d.prior===FD.pr)).sort((x,y)=>ord[x.prior]-ord[y.prior]||y.id-x.id);
+return`<h1>Painel · ${ORGS[0]}</h1>${tabs(a)}<div class="kpis">${kpi("inbox",S.dens.filter(d=>d.status==="Recebida").length,"novas para triagem")}${kpi("alert",open.filter(d=>d.prior==="Urgente").length,"urgentes abertas")}${kpi("shield",open.length,"casos em aberto")}${kpi("coin",brl(conf.reduce((s,d)=>s+d.valor,0)),"arrecadados")}${kpi("clock",S.doas.filter(d=>d.status==="Aguardando").length,"doações a confirmar")}${kpi("users",S.ints.length,"interessados em adoção")}</div>
+<div class="filters"><label>Status<select data-fd="st">${opts(STATUS,FD.st,"Todos")}</select></label><label>Prioridade<select data-fd="pr">${opts(PRIOR,FD.pr,"Todas")}</select></label></div>
+<div class="scroll"><table><thead><tr><th>Protocolo</th><th>Tipo</th><th>Local</th><th>Prioridade</th><th>Status</th></tr></thead><tbody>${l.map(d=>`<tr><td><a href="#/painel/caso/${d.id}">${d.prot}</a></td><td>${esc(d.tipo)}</td><td>${esc(d.local)}</td><td>${bd(d.prior)}</td><td>${bd(d.status)}</td></tr>`).join("")||`<tr><td colspan="5" class="empty">Nenhuma denúncia com esses filtros.</td></tr>`}</tbody></table></div>`}
+if(a==="ani")return`<h1>Painel · Animais</h1>${tabs(a)}<div class="scroll"><table><thead><tr><th>Animal</th><th>Espécie</th><th>Situação</th><th>Foto</th></tr></thead><tbody>${S.pets.map(p=>`<tr><td><span class="mini ${p.especie.toLowerCase()}">${pic(p)}</span>${esc(p.nome)}</td><td>${p.especie}</td><td><select data-ps="${p.id}" aria-label="Situação de ${esc(p.nome)}">${opts(AST,p.status)}</select></td><td><input type="file" accept="image/*" data-pf="${p.id}" aria-label="Foto de ${esc(p.nome)}"></td></tr>`).join("")}</tbody></table></div>
+<h2>Interessados em adoção</h2>${S.ints.map(i=>`<p><b>${esc(i.nome)}</b> quer adotar <b>${esc(i.animal)}</b> · ${esc(i.contato)} · ${i.d}<br>${esc(i.msg)}</p>`).join("")||`<p class="empty">Ainda não há pedidos.</p>`}
+<section class="panel"><h2>Cadastrar animal</h2><form class="form" onsubmit="return fx.novoPet(event)"><label>Nome<input name="nome" required></label><label>Espécie<select name="especie">${opts(["Cachorro","Gato","Outro"])}</select></label><label>Raça<input name="raca" value="SRD"></label><label>Sexo<select name="sexo">${opts(["Macho","Fêmea"])}</select></label><label>Porte<select name="porte">${opts(["Pequeno","Médio","Grande"])}</select></label><label>Idade<input name="idade" placeholder="2 anos"></label><label>Temperamento<input name="temp"></label><label>Descrição<textarea name="desc" rows="3"></textarea></label><label>Foto (opcional)<input type="file" name="foto" accept="image/*"></label><label class="inline"><input type="checkbox" name="vac"> Vacinado</label><label class="inline"><input type="checkbox" name="cast"> Castrado</label><button class="btn sun">Cadastrar</button></form></section>`;
+const tot=S.doas.filter(d=>d.status==="Confirmada").reduce((s,d)=>s+d.valor,0);
+return`<h1>Painel · Doações</h1>${tabs(a)}<p class="lead">Total confirmado: <b>${brl(tot)}</b></p><div class="scroll"><table><thead><tr><th>Código</th><th>Doador</th><th>Contribuição</th><th>Data</th><th>Situação</th></tr></thead><tbody>${S.doas.slice().reverse().map(d=>`<tr><td>${d.cod}</td><td>${esc(d.doador)}</td><td>${esc(d.tipo)} · ${d.valor?`${brl(d.valor)} (${esc(d.forma)})`:esc(d.item)}<br><small>${ORGS[d.org]}</small></td><td>${d.d}</td><td><select data-ds="${d.id}" aria-label="Situação da doação ${d.cod}">${opts(["Aguardando","Confirmada","Cancelada"],d.status)}</select></td></tr>`).join("")}</tbody></table></div>`};
+pg.caso=id=>{const d=S.dens.find(x=>x.id==id);if(!d)return pg.erro();
+return`<a href="#/painel/den">← Voltar ao painel</a><h1>Caso ${d.prot}</h1><div class="detail2"><section class="panel"><h2>${esc(d.tipo)}</h2><p>${esc(d.desc)}</p><dl class="facts"><dt>Local</dt><dd>${esc(d.local)}</dd><dt>Denunciante</dt><dd>${d.anon?"Anônimo":esc(d.nome)+" · "+esc(d.contato)}</dd></dl></section>
+<section class="panel"><h2>Triagem e andamento</h2><form class="form" onsubmit="return fx.caso(event,${d.id})"><label>Status<select name="status">${opts(STATUS,d.status)}</select></label><label>Prioridade<select name="prior">${opts(PRIOR,d.prior)}</select></label><label>Nova anotação<textarea name="nota" rows="3"></textarea></label><label class="inline"><input type="checkbox" name="pub"> Mostrar ao denunciante no acompanhamento</label><button class="btn sun">Salvar</button></form></section></div>
+<h2>Histórico</h2><ol class="timeline">${d.hist.slice().reverse().map(h=>`<li><time>${h.d}${h.pub?"":" · interno"}</time>${esc(h.t)}</li>`).join("")}</ol>`};
+pg.erro=()=>`<h1>Página não encontrada</h1><p class="empty">O que você procura não existe ou foi removido. <a href="#/">Voltar ao início</a></p>`;
+const go=h=>{location.hash=h};
+const fx={
+interesse(e,id){e.preventDefault();const f=new FormData(e.target),p=S.pets.find(x=>x.id==id);S.ints.push({nome:f.get("nome"),contato:f.get("contato"),msg:f.get("msg"),animal:p.nome,d:dtf()});save();flash(`Recebemos seu interesse em adotar ${p.nome}. A organização entrará em contato.`);render();return false},
+denuncia(e){e.preventDefault();const f=new FormData(e.target),an=f.get("anon")==="1",desc=f.get("desc").trim();
+if(desc.length<10){flash("Descreva o ocorrido com pelo menos 10 caracteres.","erro");render();return false}
+const d={id:S.dens.length+1,prot:cod("CP"),tipo:f.get("tipo"),desc,local:f.get("local").trim(),anon:an?1:0,nome:an?"":f.get("nome"),contato:an?"":f.get("contato"),prior:f.get("tipo")==="Animal em risco de vida"?"Alta":"Média",status:"Recebida",hist:[{t:"Denúncia recebida.",pub:1,d:dtf()}]};
+S.dens.push(d);save();go("#/acompanhar/"+d.prot+"?nova=1");return false},
+doacao(e){e.preventDefault();const f=new FormData(e.target),din=["Dinheiro","Apadrinhamento"].includes(f.get("tipo")),v=parseFloat((f.get("valor")||"0").replace(",","."))||0;
+if(din&&v<=0){flash("Informe um valor maior que zero.","erro");render();return false}
+const d={id:S.doas.length+1,cod:cod("DO"),tipo:f.get("tipo"),forma:din?f.get("forma"):"",valor:din?v:0,item:f.get("item")||"",doador:f.get("doador")||"Anônimo",org:+f.get("org"),status:"Aguardando",d:dtf()};
+S.doas.push(d);save();go("#/acompanhar/"+d.cod+"?nova=1");return false},
+busca(e){e.preventDefault();go("#/acompanhar/"+encodeURIComponent(new FormData(e.target).get("c").trim()));return false},
+login(e){e.preventDefault();const f=new FormData(e.target);if(f.get("senha")==="pet123"&&/@centralpet\.demo$/.test(f.get("email"))){org=true;go("#/painel/den")}else{flash("E-mail ou senha incorretos.","erro");render()}return false},
+caso(e,id){e.preventDefault();const f=new FormData(e.target),d=S.dens.find(x=>x.id==id);
+if(f.get("status")!==d.status||f.get("prior")!==d.prior){d.status=f.get("status");d.prior=f.get("prior");d.hist.push({t:`Status: ${d.status} · Prioridade: ${d.prior}`,pub:1,d:dtf()})}
+if(f.get("nota").trim())d.hist.push({t:f.get("nota").trim(),pub:f.get("pub")?1:0,d:dtf()});
+save();flash("Caso atualizado.");render();return false},
+novoPet(e){e.preventDefault();const f=new FormData(e.target),file=f.get("foto"),add=foto=>{S.pets.push({id:S.pets.length+1,nome:f.get("nome"),especie:f.get("especie"),raca:f.get("raca"),sexo:f.get("sexo"),porte:f.get("porte"),idade:f.get("idade"),desc:f.get("desc"),temp:f.get("temp"),vac:f.get("vac")?1:0,cast:f.get("cast")?1:0,status:"Disponível",foto:foto||""});save();flash("Animal cadastrado.");render()};if(file&&file.size)img2data(file,add);else add("");return false}};
+function nav(){const h=location.hash||"#/",a=h.split("/")[1]||"",c=k=>a===k?'aria-current="page"':"";
+$("#nav").innerHTML=`<a href="#/animais" ${c("animais")}>Adotar</a><a href="#/denunciar" ${c("denunciar")}>Denunciar</a><a href="#/doar" ${c("doar")}>Doar</a><a href="#/acompanhar" ${c("acompanhar")}>Acompanhar</a>${org?`<a class="pill" href="#/painel/den">Painel</a><a href="#/" onclick="org=false;render()">Sair</a>`:`<a class="pill" href="#/entrar">Sou organização</a>`}`;
+$("#nav").classList.remove("open");$("#bg").setAttribute("aria-expanded","false")}
+function render(){const [path,qs]=(location.hash||"#/").slice(2).split("?"),[a,b,c]=path.split("/").map(decodeURIComponent);
+let h;try{h=a===""?pg.home():a==="animais"?pg.animais():a==="animal"?pg.animal(b):a==="denunciar"?pg.denunciar():a==="doar"?pg.doar():a==="acompanhar"?pg.acompanhar(b,/nova/.test(qs||"")):a==="entrar"?pg.entrar():a==="painel"?pg.painel(b,c):pg.erro()}catch(err){h=pg.erro()}
+app.innerHTML=(msg?`<p class="flash ${msg.c}" role="status">${esc(msg.t)}</p>`:"")+h;msg=null;nav()}
+let last="";addEventListener("hashchange",()=>{if(location.hash!==last){render();scrollTo(0,0);app.focus({preventScroll:true})}last=location.hash});
+$("#bg").onclick=function(){const o=$("#nav").classList.toggle("open");this.setAttribute("aria-expanded",o)};
+document.addEventListener("change",e=>{const t=e.target;
+if(t.id==="tp"){const m=["Dinheiro","Apadrinhamento"].includes(t.value);$("#din").hidden=!m;$("#itm").hidden=m}
+else if(t.dataset.f!==undefined){F[t.dataset.f]=t.value;$("#lp").innerHTML=listaPets()}
+else if(t.dataset.fd!==undefined){FD[t.dataset.fd]=t.value;render()}
+else if(t.dataset.ps){S.pets.find(p=>p.id==t.dataset.ps).status=t.value;save()}
+else if(t.dataset.pf){const f=t.files[0];if(f)img2data(f,d=>{if(d){S.pets.find(p=>p.id==t.dataset.pf).foto=d;save();flash("Foto atualizada.");render()}})}
+else if(t.dataset.ds){S.doas.find(d=>d.id==t.dataset.ds).status=t.value;save();render()}});
+document.addEventListener("input",e=>{if(e.target.id==="fq"){F.q=e.target.value;$("#lp").innerHTML=listaPets()}});
+last=location.hash;render();
+</script>
+</body>
+</html>
